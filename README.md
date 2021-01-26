@@ -2,6 +2,16 @@
 
 react를 공부하기 위하여 만들었습니다.    
 
+## 목차
+1. JSX
+2. 이벤트 핸들링
+3. useState
+4. useState - Login
+5. useEffect
+6. 컴포넌트 반복 제거
+7. props
+8. map
+
 ### JSX
 return문안에 JSX 문법을 사용한다.    
 JavaScript의 확장된 문법이다.     
@@ -226,3 +236,7 @@ key를 넣어주어야 에러가 사라진다.
         </div>
     );
 
+
+<hr />
+
+### 영화 리스트 만들기
