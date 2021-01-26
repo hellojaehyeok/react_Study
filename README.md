@@ -159,5 +159,70 @@ import 다음에 있는 이름이 태그명이 되어 사용하면 된다.
     </div>
 
 
+<hr />
 
+### 자식컴포넌트에 데이터 보내기 props
+
+부모 -> 사용을 하는 컴포넌트    
+자식 -> 사용 되는 컴포넌트    
+
+props로 string만 보내는 것이 아닌 state도 보낼 수 있다.
+
+App.js
+
+    const [buttonName, useButtonName] = useState('ClickBtn')
+    <div className="App">
+      <Counter click="click"/>
+      <Counter click={buttonName}/>
+      <Counter/>
+    </div>
+
+
+counter.js        
+const clickString = props.click || 'Click'       
+props.click이 존재하면 props.click을 사용하고 아니면 Click을 사용한다.      
+
+    const Counter = (props)=>{
+        const [count, setCount] = useState(0);
+        const increment = () => {
+        setCount(count + 1);
+        }
+
+        const clickString = props.click || 'Click'
+        
+        return (
+            <button onClick={increment}>
+                {clickString}{count}
+            </button>
+        );
+    };
+
+
+<hr />
+
+### map을 활용한 반복문
+
+map() -> 배열 내의 모든 요소 각각에 대하여 함수를 호출한 결과를 모아 새로운 배열을 반환한다.     
+아래의 코드같은 경우 map 안에 JSX를 사용하였다.    
+key를 넣어주어야 에러가 사라진다.
+
+    const lists = [
+        {name : 'Song', index : 1},
+        {name : 'Jae', index : 2},
+        {name : 'Hyeok', index : 3}
+    ]
+
+    const renderName = lists.map(list =>{
+        return(
+            <div>
+                <div className="list_name">{list.name}</div>
+                <div className="list_index">{list.index}</div>
+            </div>
+        );
+    })
+    return (
+        <div className="App">
+            {renderName}
+        </div>
+    );
 
