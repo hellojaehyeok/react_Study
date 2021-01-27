@@ -9,8 +9,8 @@ const MovieForm = ({ updateMovie }) =>{
   const [yearError, setYearError] = useState(""); 
 
   const resetForm = ()=>{
-  setMovieTitle("");
-  setMovieYear("");
+    setMovieTitle("");
+    setMovieYear("");
   }
 
   const validateForm = () =>{
@@ -66,8 +66,7 @@ const MovieForm = ({ updateMovie }) =>{
         <button type="submit">영화추가</button>
       </form>
   );
-
-
+  
 };
 
 export default MovieForm;

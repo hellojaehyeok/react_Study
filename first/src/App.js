@@ -13,6 +13,7 @@ function App() {
     }))
   };
 
+
   const renderName = movies.length ? movies.map(movie =>{
     return(
       <MovieList
@@ -23,10 +24,10 @@ function App() {
     );
   }) : "추가된 영화가 없습니다."
 
+
   const updateMovie = (movie) =>{
     setMovies(
       [
-        // ...movies 는 앞의 배열의 그대로 가져온다. (구조 분해 할당)
         ...movies,
         movie
       ]
