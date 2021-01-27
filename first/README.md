@@ -4,6 +4,46 @@ React를 사용하여 영화 리스트 관리 페이지를 제작하였습니다
 
 <hr />
 
+### React Router
+
+네비게이션을 생성 후 각 페이지간 이동을 위하여 React Router를 설치한다.      
+
+    npm install react-router-dom
+
+
+사용할 js 파일 상단에 아래의 코드를 추가한다.      
+
+    import {
+        BrowserRouter as Router,
+        Switch,
+        Route,
+        Link
+    } from 'react-router-dom'
+
+
+사용할 태그를 <Router></Router>로 감싼다.      
+1. a -> Link
+2. nav의 a -> NavLink
+3. href -> to
+4. Route 하나당 페이지 하나
+5. path 2번 to에서 사용한 경로 '/' 단위로 구분한다.
+6. Switch  Route를 Switch로 감싸면 한 번에 하나만 보여준다. (Route의 path를 아래로 비교하다 하나가 일치하면 더 이상 비교x)
+7. exact 정확히 일치할 때만 보여준다. 
+
+네비게이션을 만들때 a 태그를 NavLink로 만들면 해당 페이지가 로드 되었을때        
+activeClassName 안에있는 className이 실행된다.     
+
+    <nav className="nav">
+        <ul>
+            <li><NavLink to="/Home" activeClassName="activeNav">Home</NavLink></li>
+            <li><NavLink to="/Movie" activeClassName="activeNav">Movie</NavLink></li>
+            <li><NavLink to="/Login" activeClassName="activeNav">Login</NavLink></li>
+        </ul>
+    </nav>
+
+
+
+
 ### 영화 리스트 만들기 - App.js
 
 영화 리스트 전체를 담는 App.js를 생성한다.       

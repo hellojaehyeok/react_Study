@@ -3,7 +3,11 @@ import Counter from './components/counter';
 import MovieList from './components/movieList';
 import MovieForm from './components/movieForm';
 import Navigation from './components/navigation';
-
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom'
 
 function App() {
   const [movies, setMovies] = useState([])
@@ -36,12 +40,26 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <Navigation />
-      <h1>Movie List</h1>
-      <MovieForm updateMovie={updateMovie}/>
-      {renderName}
-    </div>
+    <Router>
+      <div className="App">
+        <Navigation />
+        <Switch>
+          <Route path="/Home">
+            <h1>Home</h1>
+          </Route>
+
+          <Route path="/Movie">
+            <h1>Movie List</h1>
+            <MovieForm updateMovie={updateMovie}/>
+            {renderName}
+          </Route>
+
+          <Route path="/Login">
+            <h1>Login</h1>
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

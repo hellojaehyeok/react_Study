@@ -7,8 +7,8 @@ body{background: #454545; color: #fff; margin: 50px;}
 .nav > ul{display: flex;}
 .nav > ul > li{list-style: none;}
 .nav > ul > li:nth-child(2){margin: 0 20px;}
-.nav > ul > li > a{color: #fff; text-decoration: none; font-size: 30px;}
-.nav > ul > li > a:hover{}
+.nav > ul > li > a{color: #bdbdbd; text-decoration: none; font-size: 30px;}
+.nav > ul > li > a.activeNav{color: #fff;}
 
 
 /* Movie */
