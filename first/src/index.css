@@ -5,3 +5,5 @@ body{background: #454545; color: #fff;}
 .movie_list .movie_year{}
 .movie_list button{background: transparent; border: 1px solid #fff; color: #fff; outline: none; transition: 500ms; margin-top: 10px;}
 .movie_list button:hover{background: #fff; color: #454545;}
+
+.movieForm .errorText{color: #f00; margin-left: 10px;}

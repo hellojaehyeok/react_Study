@@ -3,6 +3,7 @@ import Counter from './components/counter';
 import MovieList from './components/movieList';
 import MovieForm from './components/movieForm';
 
+
 function App() {
   const [movies, setMovies] = useState([])
 
@@ -33,7 +34,7 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="App"> 
       <h1>Movie List</h1>
       <MovieForm updateMovie={updateMovie}/>
       {renderName}
