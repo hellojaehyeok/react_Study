@@ -66,7 +66,6 @@ const MovieForm = ({ updateMovie }) =>{
         <button type="submit">영화추가</button>
       </form>
   );
-  
 };
 
 export default MovieForm;
