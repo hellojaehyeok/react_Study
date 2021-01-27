@@ -11,6 +11,7 @@ const InputField = ({
     return(
         <>
             <input
+                className="inputField"
                 type={type}
                 value={value}
                 placeholder={placeholder}

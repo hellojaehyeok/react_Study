@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Counter from './components/counter';
 import MovieList from './components/movieList';
 import MovieForm from './components/movieForm';
+import Navigation from './components/navigation';
 
 
 function App() {
@@ -35,13 +36,13 @@ function App() {
   }
 
   return (
-    <div className="App"> 
+    <div className="App">
+      <Navigation />
       <h1>Movie List</h1>
       <MovieForm updateMovie={updateMovie}/>
       {renderName}
     </div>
   );
-
 }
 
 export default App;

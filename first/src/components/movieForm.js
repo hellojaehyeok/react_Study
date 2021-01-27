@@ -63,7 +63,7 @@ const MovieForm = ({ updateMovie }) =>{
           errorMassage={yearError}
         />
         <br />
-        <button type="submit">영화추가</button>
+        <button className="submitBtn" type="submit">영화추가</button>
       </form>
   );
 };
