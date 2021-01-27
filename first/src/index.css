@@ -3,3 +3,5 @@ body{background: #454545; color: #fff;}
 .movie_list{display: inline-block; border: 1px solid #fff; border-radius: 5px; margin: 10px; padding: 10px;align-items: center; justify-content: center;}
 .movie_list .movie_title{margin-right: 20px;}
 .movie_list .movie_year{}
+.movie_list button{background: transparent; border: 1px solid #fff; color: #fff; outline: none; transition: 500ms; margin-top: 10px;}
+.movie_list button:hover{background: #fff; color: #454545;}

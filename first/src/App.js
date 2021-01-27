@@ -1,52 +1,41 @@
 import React, {useState, useEffect} from 'react';
-import Counter from './counter';
-import List from './list';
+import Counter from './components/counter';
+import MovieList from './components/movieList';
+import MovieForm from './components/movieForm';
 
 function App() {
-  
-  const [movieTitle, setMovieTitle] = useState("");
-  const [movieYear, setMovieYear] = useState("");
-  const [movies, setMovies] = useState([
-    {title : '해리포터와 마법사의 돌', year : 2001},
-    {title : '해리포터와 비밀의 방', year : 2002},
-    {title : '해리포터와 아즈카반의 죄수 ', year : 2004}
-  ])
+  const [movies, setMovies] = useState([])
 
-  const renderName = movies.map(movie =>{
+  const removeMovie = (id) =>{
+    setMovies(movies.filter(movie =>{
+      return movie.id !== id;
+    }))
+  };
+
+  const renderName = movies.length ? movies.map(movie =>{
     return(
-      <List movie={movie} key={movie.title}/>
+      <MovieList
+      movie={movie}
+      key={movie.id}
+      removeMovie={removeMovie}
+      />
     );
-  })
+  }) : "추가된 영화가 없습니다."
 
-  const updateMovie = (e) =>{
-    e.preventDefault();
+  const updateMovie = (movie) =>{
     setMovies(
       [
+        // ...movies 는 앞의 배열의 그대로 가져온다. (구조 분해 할당)
         ...movies,
-        {title:movieTitle, year:movieYear}
+        movie
       ]
-    )
+    );
   }
 
   return (
     <div className="App">
       <h1>Movie List</h1>
-      <form onSubmit={updateMovie}>
-        <input
-          type="text"
-          value={movieTitle}
-          placeholder="영화제목"
-          onChange={e => setMovieTitle(e.target.value)}
-        />
-        <input
-          type="text"
-          value={movieYear}
-          placeholder="개봉년도"
-          onChange={e => setMovieYear(e.target.value)}
-        />
-
-        <button type="submit">영화추가</button>
-      </form>
+      <MovieForm updateMovie={updateMovie}/>
       {renderName}
     </div>
   );
