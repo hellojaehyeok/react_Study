@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 
 const InputField = ({
+    className,
     type,
     value,
     placeholder,
@@ -9,16 +10,16 @@ const InputField = ({
 }) =>{
 
     return(
-        <>
+        <div>
             <input
-                className="inputField"
+                className={className}
                 type={type}
                 value={value}
                 placeholder={placeholder}
                 onChange={onChange}
             />
             <span className="errorText">{errorMassage}</span>
-        </>
+        </div>
     );
 };
 

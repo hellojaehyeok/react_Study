@@ -3,6 +3,7 @@ import Counter from './components/counter';
 import MovieList from './components/movieList';
 import MovieForm from './components/movieForm';
 import Navigation from './components/navigation';
+import SignUp from './components/signUp';
 import {
   BrowserRouter as Router,
   Switch,
@@ -10,7 +11,11 @@ import {
 } from 'react-router-dom'
 
 function App() {
-  const [movies, setMovies] = useState([])
+  const [movies, setMovies] = useState([
+    {title :" 해리포터와 마법사의 돌", year : 2001, id:"movie_1"},
+    {title :" 해리포터와 비밀의 방", year : 2002, id:"movie_2"},
+    {title :" 해리포터와 아즈카반의 죄수", year : 2004, id:"movie_3"}
+  ])
 
   const removeMovie = (id) =>{
     setMovies(movies.filter(movie =>{
@@ -39,14 +44,12 @@ function App() {
     );
   }
 
+
   return (
     <Router>
       <div className="App">
         <Navigation />
         <Switch>
-          <Route path="/Home">
-            <h1>Home</h1>
-          </Route>
 
           <Route path="/Movie">
             <h1>Movie List</h1>
@@ -55,8 +58,14 @@ function App() {
           </Route>
 
           <Route path="/Login">
-            <h1>Login</h1>
+            <h1>Sign Up</h1>
+            <SignUp />
           </Route>
+          
+          <Route path="/Home">
+            <h1>Home</h1>
+          </Route>
+
         </Switch>
       </div>
     </Router>

@@ -48,21 +48,21 @@ const MovieForm = ({ updateMovie }) =>{
   return (
       <form className="movieForm" onSubmit={onSubmit}>
         <InputField
+          className="movieTitle"
           type="text"
           value={movieTitle}
           placeholder="영화제목"
           onChange={e => setMovieTitle(e.target.value)}
           errorMassage={titleError}
         />
-        <br />
         <InputField
+          className="movieYear"
           type="number"
           value={movieYear}
           placeholder="개봉년도"
           onChange={e => setMovieYear(e.target.value)}
           errorMassage={yearError}
         />
-        <br />
         <button className="submitBtn" type="submit">영화추가</button>
       </form>
   );
