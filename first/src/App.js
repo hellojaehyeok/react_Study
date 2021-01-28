@@ -57,13 +57,17 @@ function App() {
             {renderName}
           </Route>
 
-          <Route path="/Login">
+          <Route path="/SignUp">
             <h1>Sign Up</h1>
             <SignUp />
           </Route>
           
           <Route path="/Home">
             <h1>Home</h1>
+            <p>
+              안녕하세요 송재혁입니다. <br/>
+              React를 이용하여 영화리스트, 회원가입폼을 제작하였습니다.
+            </p>
           </Route>
 
         </Switch>

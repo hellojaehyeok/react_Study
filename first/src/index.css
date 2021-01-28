@@ -4,6 +4,7 @@ body{background: #454545; color: #fff;display: flex; align-items: center; justif
 
 
 .App{text-align: center;}
+.App p{font-size: 20px; line-height: 30px; margin-top: 10px;}
 
 /* Navigation */
 .nav{position: absolute; top: 50px; left: 50%; transform: translateX(-50%);}
@@ -32,8 +33,8 @@ body{background: #454545; color: #fff;display: flex; align-items: center; justif
 
 
 /* SignUp */
-.signUpForm{display: flex;}
-.signUpForm div{display: flex; flex-direction: column; margin: 10px 20px 0 0;}
+.signUpForm{display: flex; flex-direction: column; align-items: center;}
+.signUpForm div{display: flex; flex-direction: column; margin: 10px 0 0;}
 .signUpForm input{margin-bottom: 10px; width: 200px; height: 30px; padding: 5px;}
-.signUpForm span{color:#ff8a8a;}
+.signUpForm span{color:#ff8a8a; height: 20px; font-size: 16px;}
 .signUpForm button{width: 100px; height: 50px; margin-top: 10px;}
