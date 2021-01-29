@@ -2,31 +2,32 @@ import React, { Component } from 'react';
 
 class Todo extends Component {
 
-    state = {
-        count : 0
-    };
-
     handleIncrement = () =>{
-        this.setState({ count : this.state.count + 1});
+        this.props.onIncrement(this.props.todo);
     };
     
     handleDecrement = () =>{
-        const count = this.state.count - 1;
-        this.setState({ count : count < 0 ? 0 : count});
+        this.props.onDecrement(this.props.todo);
+    };
+
+    handleDelete = () =>{
+        this.props.onDelete(this.props.todo);
     };
 
     render() {
+        const {name, count} = this.props.todo;
+
         return (
             <li className="todo">
-                <span className="todo-name">Coding</span>
-                <span className="todo-count">{this.state.count}</span>
+                <span className="todo-name">{name}</span>
+                <span className="todo-count">{count}</span>
                 <button className="todo-button todo-increase"  onClick={this.handleIncrement}>
                     <i className="fas fa-plus"></i>
                 </button>
                 <button className="todo-button todo-decrease" onClick={this.handleDecrement}>
                     <i className="fas fa-minus"></i>
                 </button>
-                <button className="todo-button todo-delete">
+                <button className="todo-button todo-delete" onClick={this.handleDelete}>
                     <i className="fas fa-trash"></i>
                 </button>
             </li>

@@ -5,6 +5,7 @@
 .todo{
   font-size: 1.5rem;
   list-style: none;
+  margin-bottom: 20px;
 }
 
 /* Todo Text */
@@ -22,7 +23,6 @@
 .todo-count:hover{
   opacity: 0.8;
 }
-
 
 /* Todo button */
 button{
