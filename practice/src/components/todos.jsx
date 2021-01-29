@@ -20,6 +20,10 @@ class Todos extends Component {
         this.props.onAdd(name);
     }
 
+    handleAdd = (name) =>{
+        this.props.onAdd(name);
+    }
+
     render() {
         return (
             <>
@@ -37,6 +41,7 @@ class Todos extends Component {
                         ))
                     }
                 </ul>
+                <button onClick={this.props.onReset}>카운트 초기화</button>
             </>
         );
     }

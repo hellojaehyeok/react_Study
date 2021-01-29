@@ -54,6 +54,14 @@ class App extends Component {
     this.setState({todos})
   }
 
+  handleReset = () =>{
+    const todos = this.state.todos.map(todo =>{
+      todo.count = 0;
+      return todo;
+    });
+    this.setState({todos, count : 0});
+  }
+
   render() {
     return (
       <>
@@ -66,6 +74,7 @@ class App extends Component {
           onDecrement={this.handleDecrement}
           onDelete={this.handleDelete}
           onAdd={this.handleAdd}
+          onReset={this.handleReset}
         />
       </>
     );
