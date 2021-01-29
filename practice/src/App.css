@@ -1,24 +1,48 @@
+
+
+
+/* Todo List */
+.todo{
+  font-size: 1.5rem;
+  list-style: none;
+}
+
+/* Todo Text */
+.todo-count{
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  color: #fff;
+  background-color: #34a853;
+  border-radius: 50%;
+  margin: 0 20px;
+  transition: 500ms;
+}
+.todo-count:hover{
+  opacity: 0.8;
+}
+
+
+/* Todo button */
 button{
   outline: none;
   border: 0;
   cursor: pointer;
 }
-
 .todo-button{
   background: transparent;
   font-size: 1.5rem;
   margin: 0 5px;
   transition: 500ms;
 }
-
 .todo-button:hover{
   opacity: 0.8;
 }
 .todo-increase,
 .todo-decrease{
-  color: #57c868;
+  color: #34a853;
 }
-
 .todo-delete{
-  color: #c85757;
+  color: #ea4335;
 }
