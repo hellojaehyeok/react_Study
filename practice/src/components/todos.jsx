@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Todo from './todo';
+import TodoAddForm from './todoAddForm';
 
 class Todos extends Component {
 
@@ -15,22 +16,28 @@ class Todos extends Component {
         this.props.onDelete(todo);
     };
 
+    handleAdd = (name) =>{
+        this.props.onAdd(name);
+    }
 
     render() {
         return (
-            <ul className="list-wrap">
-                {
-                    this.props.todos.map(todo =>(
-                        <Todo
-                        key={todo.id}
-                        todo={todo}
-                        onIncrement={this.handleIncrement}
-                        onDecrement={this.handleDecrement}
-                        onDelete={this.handleDelete}
-                        />
-                    ))
-                }
-            </ul>
+            <>
+                <TodoAddForm onAdd={this.handleAdd} />
+                <ul className="list-wrap">
+                    {
+                        this.props.todos.map(todo =>(
+                            <Todo
+                            key={todo.id}
+                            todo={todo}
+                            onIncrement={this.handleIncrement}
+                            onDecrement={this.handleDecrement}
+                            onDelete={this.handleDelete}
+                            />
+                        ))
+                    }
+                </ul>
+            </>
         );
     }
 

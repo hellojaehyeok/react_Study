@@ -8,6 +8,10 @@
 .nav-count{}
 
 
+/* Input Form */
+.input-form{margin-bottom: 30px;}
+.todo-input{width: 150px; height: 30px; padding: 3px 3px 3px 6px; border-radius: 10px; border: 1px solid #454545; outline: none;}
+.add-button{width: 50px; height: 30px; margin-left: 20px; border-radius: 10px;}
 
 /* Todo List */
 .todo{

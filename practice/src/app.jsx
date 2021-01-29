@@ -44,18 +44,28 @@ class App extends Component {
     this.setState({todos, count : navCount});
   };
 
+  handleAdd = (name) =>{
+    const newTodo = {
+      id : Date.now,
+      name : name,
+      count : 0
+    }
+    const todos = [...this.state.todos, newTodo];
+    this.setState({todos})
+  }
+
   render() {
     return (
       <>
         <Nav 
           totalCount={this.state.count}
         />
-        
         <Todos 
           todos={this.state.todos}
           onIncrement={this.handleIncrement}
           onDecrement={this.handleDecrement}
           onDelete={this.handleDelete}
+          onAdd={this.handleAdd}
         />
       </>
     );
