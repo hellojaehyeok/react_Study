@@ -1,9 +1,9 @@
+import React from 'react';
 import './app.css';
+import Todo from './components/todo';
 
 function App() {
-  return (
-    <h1>Hello</h1>
-  );
+  return <Todo/>;
 }
 
 export default App;
