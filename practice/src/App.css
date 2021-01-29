@@ -1,5 +1,13 @@
 
 
+*{margin: 0; padding: 0;}
+
+/* Nav */
+.nav-wrap{margin: 40px 0;}
+.nav-title{}
+.nav-count{}
+
+
 
 /* Todo List */
 .todo{
