@@ -1,6 +1,6 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 
-class TodoAddForm extends Component {
+class TodoAddForm extends PureComponent {
 
     inputRef = React.createRef();
 

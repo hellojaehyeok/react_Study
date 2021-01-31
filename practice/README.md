@@ -9,6 +9,7 @@ react를 설치하며 불필요한 파일들을 모두 제거하고 파일 이�
 
 ### State
 
+React 어플리케이션은 state가 변하면 전체적으로 render가 호출이 되는데 실제로 필요한 부분만 dom 요소에 업데이트된다.      
 this.setState -> state를 업데이트해야 할때는 setState를 이용하여야 한다.       
 
 
@@ -106,3 +107,12 @@ React.createRef();를 사용하여 Ref 오브젝트를 생성하고 접근하고
     placeholder="할일을 적어주세요"
     />
 
+
+<hr />
+
+### PureComponent && memo
+
+일반 Component와 달리 PureComponent 는 props와 state 안에 있는 데이터가 최상위에있는       
+데이터가 변하지 않으면 다시 렌더링이 되지 않는다.      
+
+memo -> class가 아닌 funtion 형식일때 쓰인다. PureComponent와 동일한 기능이다.
