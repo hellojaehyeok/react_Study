@@ -2,6 +2,7 @@ import React, { Component }  from 'react';
 import './app.css';
 import Todos from './components/todos';
 import Nav from './components/nav';
+import TodoHooks from './components/todoHooks';
 
 class App extends Component {
 
@@ -65,6 +66,7 @@ class App extends Component {
   render() {
     return (
       <>
+        <TodoHooks />
         <Nav 
           totalCount={this.state.count}
         />
