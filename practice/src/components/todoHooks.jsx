@@ -15,7 +15,7 @@ const TodoHooks = (props) => {
 
     return (
         <li className="todo">
-            <span className="todo-name">React</span>
+            <span className="todo-name">Hello</span>
             <span className="todo-count">{count}</span>
             <button className="todo-button todo-increase"  onClick={increaseCount}>
                 <i className="fas fa-plus"></i>
